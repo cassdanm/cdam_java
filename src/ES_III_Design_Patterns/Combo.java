@@ -1,42 +1,31 @@
+package ES_III_Design_Patterns;
+
+
+//superclass
 
 //superclass
 public class Combo{
 
-    private Burguer burguer = new Burguer();
-    private Sobremesa sobremesa = new Sobremesa();
-    private Bebida bebida = new Bebida();
+    private Burguer burguer;
+    private Sobremesa sobremesa;
+    private Bebida bebida;
 
 
     public void CriarCombo (int x)
     {
         if(x == 1) {
-            //burguer
-            burguer.setDescricao("X-Tudo");
-            burguer.setGramas(300);
-            burguer.setPreco(25.75);
-            //sobremesa
-            sobremesa.setDescricao("Bolo de pote: chocolate");
-            sobremesa.setPreco(12.75);
-            sobremesa.setTamanho("Grande");
-            //bebida
-            bebida.setDescricao("Coca-cola");
-            bebida.setPreco(15.35);
-            bebida.setML(600);
+            this.burguer = new Burguer("X-Tudo", 300, 25.75);
+            this.sobremesa = new Sobremesa("Bolo de pote: chocolate","Grande",12.75);
+            this.bebida = new Bebida("Coca-cola", 600,15.90);
+        }
+        else if(x == 2){
+            this.burguer = new Burguer("X-Bacon", 250, 20.90);
+            this.sobremesa = new Sobremesa("Bolo de pote: morango","Médio",12.75);
+            this.bebida = new Bebida("Pepsi", 600,12.90);
+
         }
         else{
-            //burguer
-            burguer.setDescricao("X-Bacon");
-            burguer.setGramas(300);
-            burguer.setPreco(21.50);
-            //sobremesa
-            sobremesa.setDescricao("Bolo de pote: morango");
-            sobremesa.setPreco(10.50);
-            sobremesa.setTamanho("Médio");
-            //bebida
-            bebida.setDescricao("Pepsi");
-            bebida.setPreco(12.90);
-            bebida.setML(600);
-
+            System.out.println("Tipo de combo inválido");
         }
     }
 

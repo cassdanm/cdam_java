@@ -1,3 +1,4 @@
+package ES_III_Design_Patterns;
 
 public class Bebida extends Produto {
 
@@ -9,6 +10,12 @@ public class Bebida extends Produto {
 
     public void setML(int ML) {
         this.ML = ML;
+    }
+
+    public Bebida(String descricao, int ml, double preco)
+    {
+        super(descricao,preco);
+        this.ML = ml;
     }
 
 }
