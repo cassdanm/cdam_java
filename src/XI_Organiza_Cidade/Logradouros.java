@@ -8,6 +8,7 @@ package XI_Organiza_Cidade;
  * região e bairro. Acessar o método construtor da superclasse através do método super( ).
 
  * 4. Verificar que atributos e métodos a nova classe “Logradouros” tem acesso.
+  *RESP: gets/sets Regiao, Populacao e Bairro.
  */
 public class Logradouros extends Regiao_de_Santos{
 
